@@ -64,7 +64,7 @@ body {
 }
 article {
     display: inline-block;
-    width:  224px;
+    width:  225px;
     text-align: center;
     background-color: #333;
     padding-bottom: 10px;
@@ -78,8 +78,12 @@ article a {
     color: darkgoldenrod;
     
 }
+
+article a:hover {
+    color: rgb(126, 128, 126);
+}
 #article2, #article3, #article4 {
-    margin-left: 17px;
+    margin-left: 16px;
 }
 .foto {
     display: inline-block;
@@ -92,11 +96,24 @@ article a {
 
 #moreInfo{
     background-color: black;
-    height: 300px;
+    margin: 0;
 }
 #moreInfo div {
+    height: 200px;
+
+    background-color: red;
     display: inline-block;
-    margin-left: 10px;
+}
+#developers {
+    width: 466px;
+}
+#aboutProject {
+    width: 225px;
+    margin-left: 20px;
+}
+#submitForm {
+    width: 225px;
+    margin-left: 16px;
 }
 
 footer {
