@@ -1,0 +1,75 @@
+
+
+#logoArea {
+    width: 960px;
+    margin: auto;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    color: rgb(107, 107, 107);
+
+}
+#logoArea a {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(107, 107, 107);
+}
+
+#logoArea a:hover {
+    color: rgb(14, 13, 13);
+    cursor: pointer;
+}
+#logoArea div {
+    display: inline-block;
+}
+#moreOptions {
+    margin-left: 50%;
+    margin-right: 4%;
+}
+#searchBar form {
+    background-color: #333;
+    border-radius: 100px;
+}
+#searchBar input {
+    border-radius: 100px;
+    background-color: #333;
+    border: none;
+    height: 25px;
+    margin: 0 20px;
+}
+.fa-search{
+    margin-right: 8px;
+    margin-top: 3px;
+    background-color: white;
+    border-radius: 100px;
+    padding:3px;
+}
+/*Navbar or main menu */
+
+.mainMenu {
+    width: 960px;
+    margin: auto;
+    overflow: hidden ;
+    background-color: #333;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+
+/*Main menu options (links)*/
+
+  .mainMenu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: serif;
+  
+  }
+
+  .mainMenu a:hover {
+    color: grey;
+  }

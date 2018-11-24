@@ -1,0 +1,115 @@
+/*Black section upside footer*/
+
+#moreInfo{
+    background-color: black;
+    margin: 0;
+    color: white;
+}
+#moreInfo div {
+    color: rgb(189, 187, 187);
+    display: inline-block;
+}
+
+/*First div in black section. Div that tells about developers who worked on project*/
+
+#developers {
+    width: 490px;
+    margin-left: 175px;
+}
+#developers h2 {
+    padding: 10px 20px;
+}
+.developer {
+    padding: 10px 15px;
+}
+.devAvatar {
+    padding: 2px;
+    border:1px solid rgb(90, 89, 89);
+}
+.developer td {
+    padding: 5px;
+}
+.developerImage {
+    background-image: url("../fotot/articlefoto3.jpg");
+}
+.developer2  {
+    padding-bottom: 20px;
+}
+
+/*The middle part in black section that gives us more info about the project*/
+
+.aboutDeveloper {
+    float: right;
+    width: 60%;
+    display: inline;
+}
+#aboutProject {
+    width: 225px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+#aboutProject p{
+    font-size: 13px;
+}
+#aboutProject a{
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+#aboutProject .readMore {
+    text-align: right;
+    float: right;
+}
+
+/*Submit form in the black section that sends messages*/
+ #submitForm {
+    width: 225px;
+    height: 100px;
+    margin-left: 16px;
+    margin-bottom: 30px;
+}
+button[type="submit"] {
+    background-color: #2D2F2E;
+    border-radius: 3px;
+    height: 30px;
+    width: 60px;
+    color: silver;
+    cursor: pointer;
+    border: none;
+}
+button[type="submit"]:hover {
+    background-color: rgb(109, 108, 108);
+}
+::placeholder {
+    color: rgb(129, 129, 129);
+    font-family:  serif;
+    font-size: 14px;    
+}
+#submitForm input, textarea {
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius:  1px;
+    border: 2px solid #2D2F2E;
+    border-radius: 4px;
+    background-color: #2D2F2E;
+}
+#submitForm input {
+    height: 25px;
+}
+#submitForm input:focus, textarea:focus{
+    border: silver;
+}
+
+/*Grey section in the end*/
+
+footer {
+    width: 100%;
+    background-color: #2D2F2E;
+    background-repeat: repeat-x;
+}
+
+footer pre {
+    font-size: 12px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding: 10px;
+    color: silver
+}
