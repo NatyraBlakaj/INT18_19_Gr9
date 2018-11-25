@@ -2,7 +2,9 @@
 
 #moreInfo{
     background-color: black;
-    margin: 0;
+    display: table;
+    width: 100%;
+    margin: auto;
     color: white;
 }
 #moreInfo div {
@@ -14,7 +16,7 @@
 
 #developers {
     width: 490px;
-    margin-left: 175px;
+    margin-left: 13%;
 }
 #developers h2 {
     padding: 10px 20px;

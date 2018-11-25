@@ -33,15 +33,25 @@ body {
     margin-top: 10px;
     text-align: center;
   }
+
+.fadingLine{ 
+    margin: 2% auto;
+    display:block;
+    border:none;
+    color:white;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 450, from(#000), to(#E9E9E1));
+}
 #info{
         margin:auto;
     }
 
 #articles {
     width: 960px;
-    margin-left: 195px;
-    margin-top: 20px;
-    display: inline-block;
+    float: none;
+    display: table;
+    margin: 2% auto;
     
 }
 article {
@@ -65,7 +75,7 @@ article a:hover {
     color: rgb(126, 128, 126);
 }
 #article2, #article3, #article4 {
-    margin-left: 16px;
+    margin-left: 2%;
 }
 .foto {
     display: inline-block;
