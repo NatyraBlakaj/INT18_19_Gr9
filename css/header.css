@@ -4,16 +4,21 @@
     width: 960px;
     margin: auto;
     height: 50px;
-    margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 30px;
     color: rgb(107, 107, 107);
+    display: table;
+}
 
+#logo {
+    height: 100px;
+    width: 300px;
 }
 #logoArea a {
     text-decoration: none;
     font-size: 14px;
     color: rgb(107, 107, 107);
+    width: 47px;
 }
 
 #logoArea a:hover {
@@ -24,9 +29,14 @@
     display: inline-block;
 }
 #moreOptions {
-    margin-left: 50%;
     margin-right: 4%;
+    display: inline-block;
+    float: right;
+    margin-top: 12%;
+
+    
 }
+
 #searchBar form {
     background-color: #333;
     border-radius: 100px;
@@ -69,10 +79,12 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 12px;
+    padding: 14px 0;
     text-decoration: none;
     font-size: 16px;
     font-family: serif;
+    margin: 0;
+    width: 120px;
     
 
   
@@ -81,3 +93,7 @@
   .mainMenu a:hover {
     color: grey;
   }
+
+.active {
+    background-color: #333;
+}
