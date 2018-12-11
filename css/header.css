@@ -25,12 +25,9 @@
     color: rgb(14, 13, 13);
     cursor: pointer;
 }
-#logoArea div {
-    display: inline-block;
-}
+
 #moreOptions {
     margin-left: 4%;
-    display: inline-block;
     float: right;
     margin-top: 12%;
 
