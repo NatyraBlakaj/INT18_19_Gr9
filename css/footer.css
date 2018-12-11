@@ -1,5 +1,9 @@
-/*Black section upside footer*/
 
+* {
+    margin: 0;
+}
+
+/*Black section upside footer*/
 #moreInfo{
     background-color: black;
     display: table;
