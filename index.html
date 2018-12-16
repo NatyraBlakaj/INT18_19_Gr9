@@ -6,13 +6,16 @@
         <meta charset="UTF-8">
         <title>Memories</title>
 
-
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
     </head>
+
 
 <body>
 
@@ -25,12 +28,12 @@
                 <td id="moreOptions">
                     <a href="#">Sign up</a> |
                     <a href="#">Login</a> |
-                    <a href="#">Rss Feeds</a> |
-                    <a href="#">Archives</a>
+                    <a href="#">Archives</a> |
+                    <a href="#">Contact</a>
                 </td>
                 <td id="searchBar">
                     <form action="0">
-                        <input type="search" size="15">
+                        <input type="search" size="15" autocomplete="on">
                         <i class="fa fa-search"></i>
                     </form>
                 </td>
@@ -38,13 +41,13 @@
 
             <div class="mainMenu">
                 <a href="../index.html"   class="active">HOMEPAGE</a>
-                <a href="src/rssFeed.html"  >RSS FEEDS</a>
                 <a href="src/gallery.html"  >GALLERY</a>
-                <a href="#">DROPDOWN</a>
-                <a href="src/portfolio.html"    >PORTFOLIO</a>
-                <a href="src/about.html"  >ABOUT</a>
+                <a href="src/about.html">ABOUT</a>
+                <a href="src/portfolio.html">PORTFOLIO</a>
+                <a href="src/team.html"  >TEAM</a>
                 <a href="src/contact.html"  >CONTACT</a>
                 <a href="src/game.html"  >GAME</a>
+                <a href="src/login.html"> LOG IN</a>
             </div>
         </header>
 
@@ -52,13 +55,37 @@
         <div id="container">
             <div id="homePageInfo">
                 <div id="slideShow">
-                    <div id="slideImage">
-                        <div id="slideCaption">
-                            <h3>Slide 1 caption</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                            Provident natus esse repellat illo odio  amet consectetur adipisici </p>
-                        </div>
-                    </div>
+                        <div class="slideshow-container">
+
+                                <div class="mySlides fade">
+                                  <img src="fotot/articlefoto1.jpg" >
+                                  <div class="caption"><h1>Slide 1</h1><p> slide 1 caption</p></div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <img src="fotot/articlefoto2.jpg">
+                                  <div class="caption">
+                                  <h1>Slide 2</h1>
+                                  <p>
+                                  just some text 
+                                  </p>
+                                  </div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <img src="fotot/articlefoto3.jpg">
+                                  <div class="caption"><H1>Slide 3</H1><P>this is slide 3 caption</P></div>
+                                </div>
+                                
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                
+                                </div>
+                                <br>
+                                
+                                
+
+
                 </div>
                
                 <div id="slideShowText">
@@ -188,5 +215,35 @@
         </footer>
 
     <script src="js/responsive.js"></script>
+    <script>
+            var x = 1;
+            showSlides(x);
+
+            function plusSlides(n) {
+            showSlides(x += n);
+            }
+
+
+            function currentSlide(n) {
+            showSlides(x = n);
+            }
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {x = 1}    
+            if (n < 1) {x = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[x-1].style.display = "block";  
+            dots[x-1].className += " active";
+            }
+    
+    </script>
 </body>
 </html>

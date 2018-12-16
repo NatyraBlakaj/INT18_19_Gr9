@@ -1,0 +1,25 @@
+h1,h2,p{
+    text-align: center;
+}
+.founder{
+    width:960px;
+    height:320px;
+    background-color: rgb(122, 107, 136);
+    margin-top:30px;
+}
+article{
+
+     display:inline-block;
+}
+
+#founder1{
+    
+    margin-left: 60px;
+}
+#founder2{
+    margin-left: 300px;
+}
+article img{
+    margin-left:70px;
+    margin-top:40px;
+}
