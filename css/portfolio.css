@@ -1,0 +1,14 @@
+.container table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin:auto;
+    margin-top:40px;
+  }
+  .container th{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  .container td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }

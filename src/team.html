@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Memories</title>
+
+
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/team.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+
+<body>
+
+        
+        <header>
+            <table id="logoArea">
+                <td id="logo">
+                    <img src="../fotot/logo.png" height="100px" width="300px" alt="Logo">
+                </td>
+                <td id="moreOptions">
+                    <a href="#">Sign up</a> |
+                    <a href="#">Login</a> |
+                    <a href="#">Rss Feeds</a> |
+                    <a href="#">Archives</a>
+                </td>
+                <td id="searchBar">
+                    <form action="0">
+                        <input type="search" size="15">
+                        <i class="fa fa-search"></i>
+                    </form>
+                </td>
+            </table>
+
+            <div class="mainMenu">
+                <a href="../index.html"   class="active">HOMEPAGE</a>
+                <a href="../src/gallery.html"  >GALLERY</a>
+                <a href="../src/about.html">ABOUT</a>
+                <a href="../src/portfolio.html">PORTFOLIO</a>
+                <a href="../src/team.html"  >TEAM</a>
+                <a href="../src/contact.html"  >CONTACT</a>
+                <a href="../src/game.html"  >GAME</a>
+                <a href="../src/login.html"> LOG IN</a>
+            </div>
+        </header>
+
+        <div class="container">
+                <div class="employer" id="employer1">
+                    <img src="../fotot/maleavatar.jpg" alt="Avatar couldn't load" class="devAvatar1" height="150px" width="150px">
+                     <h1>Lorem ipsum</h1>
+                     <p class="showHideInfo showMoreDev1">show/hide Knowledge</p>               
+                    <ul class="asd">
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum inventore qui
+                        busdam, in asperiores fugiat, 
+                        provident molestias quaerat veniam odit aperiam ad sed officia. Voluptates sa
+                        piente neque maiores temporibus illo doloribus.</p>
+                </div>
+                <div class="employer" id="employer1">
+                    <img src="../fotot/maleavatar.jpg" alt="Avatar couldn't load" class="devAvatar2" height="150px" width="150px">
+                     <h1>Lorem ipsum</h1>
+                     <p class="showHideInfo showMoreDev2">show/hide Knowledge</p>                   
+                    <ul>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum inventore qui
+                        busdam, in asperiores fugiat, 
+                        provident molestias quaerat veniam odit aperiam ad sed officia. Voluptates sa
+                        piente neque maiores temporibus illo doloribus.</p>
+                </div>
+        </div>
+
+
+        <footer>
+            <pre>                                                       copyright&copy;2013-All rights Reserved-Domain Name                                                                                                                                                                                                                     Punoi grupi 9</pre>
+        </footer>
+
+        <script>
+
+$(document).ready(function() {
+  var degrees = 0;
+  $('.devAvatar1').click(function rotateMe(e) {
+    degrees += 180;
+    $('.devAvatar1').css({
+      'transform': 'rotate(' + degrees + 'deg)',
+      '-webkit-transform': 'rotate(' + degrees + 'deg)',
+    });
+  })
+});
+
+        </script>
+</body>
+</html>

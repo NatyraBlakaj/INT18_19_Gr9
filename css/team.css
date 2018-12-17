@@ -1,0 +1,36 @@
+.employer img {
+    border-radius: 100%;
+    display: table;
+    margin: auto;
+}
+.employer {
+    width: 48%;
+    display: inline-block;
+    margin: 5% 0;
+}
+.employer h1 {
+    text-align: center;
+}
+.employer ul, .employer ol {
+    margin: 5% 0 10% 0;
+}
+.showHideInfo {
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+.showHideInfo:hover {
+    color: rgb(166, 133, 197);
+}
+li {
+    cursor: pointer;
+    text-align: center;
+    list-style-type: none;
+}
+li:hover {
+    color: red;
+    list-style-type: circle;
+}
+.employer p {
+    margin: 30px;
+}

@@ -22,4 +22,5 @@ article{
 article img{
     margin-left:70px;
     margin-top:40px;
+    border:radius;
 }

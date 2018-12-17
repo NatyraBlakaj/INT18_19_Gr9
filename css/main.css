@@ -7,9 +7,8 @@ body {
 .container{
     height: 990px;
     width: 960px;
-    border: 1px solid black;
+    border: 1px solid rgb(185, 167, 151);
     margin:auto;
-    background-color: grey;
     margin-top:20px;
     margin-bottom: 20px;
 }

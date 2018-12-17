@@ -1,0 +1,45 @@
+
+ .fas{
+   margin: 10px 0;
+   color:white;
+   font-size:14px;
+   background-color:rgba(231, 13, 13, 0.842);
+   height: 30px;
+   width: 28px;
+   margin-left: 150px;
+   padding: 12px 0 0 17px;
+ }
+ form h1{
+  background-color: #DD614A;
+ text-align: center;
+ color: #F4A698;
+ }
+ 
+
+ input {
+     box-sizing: border-box;
+     border: none;
+     height: 41px;
+     padding-bottom: 4px;
+     font-size: 17px;
+     width: 60%;
+     outline: none;
+     text-align: center;
+   }
+   input[type=button]{
+     background-color: #4CAF50;
+     border-radius:4px;
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+     background-color:rgba(231, 13, 13, 0.842);
+     float: right;
+     width: 30%;
+     margin-right: 19%;
+   }
+   input[type="button"]:hover {
+     background-color: rgba(231, 13, 13, 0.842);
+     border:none;
+   }
+   
+  .devAvatar{transition: all 0.5s ease;}
