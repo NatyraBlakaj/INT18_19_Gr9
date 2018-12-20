@@ -2,6 +2,7 @@
     border-radius: 100%;
     display: table;
     margin: auto;
+    position: relative;
 }
 .employer {
     width: 48%;

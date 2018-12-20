@@ -12,3 +12,17 @@
     border: 1px solid black;
     border-collapse: collapse;
   }
+  input[type=button]{
+    margin-top:50px;
+    margin-left:405px;
+    cursor: pointer;
+    width:150px;
+    height:30px;
+    border-radius:5px;
+    border-color: rgb(218, 195, 161);
+    background-color: rgb(243, 107, 107);
+  }
+  input[type="button"]:hover {
+    outline: none;
+    border:none;
+  

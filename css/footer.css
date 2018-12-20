@@ -90,8 +90,10 @@ button[type="submit"]:hover {
     font-family:  serif;
     font-size: 14px;    
 }
-#submitForm input, textarea {
-    cursor: pointer;
+#submitForm input, #submitForm textarea {
+    cursor: text;
+    border: 1px solid #2D2F2E;
+    outline: none;
     margin-bottom: 10px;
     border-radius:  1px;
     border: 2px solid #2D2F2E;
@@ -101,7 +103,7 @@ button[type="submit"]:hover {
 #submitForm input {
     height: 25px;
 }
-#submitForm input:focus, textarea:focus{
+#submitForm input:focus, #submitForm textarea:focus{
     border: silver;
 }
 

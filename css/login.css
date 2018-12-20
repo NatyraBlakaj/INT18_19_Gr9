@@ -10,13 +10,11 @@
    padding: 12px 0 0 17px;
  }
  form h1{
-  background-color: #DD614A;
+  background-color:rgba(231, 13, 13, 0.842);
  text-align: center;
- color: #F4A698;
+ color:black;
  }
- 
-
- input {
+ input{
      box-sizing: border-box;
      border: none;
      height: 41px;
@@ -43,3 +41,8 @@
    }
    
   .devAvatar{transition: all 0.5s ease;}
+
+  #loginform {
+    margin-top: 10%;
+    background-color:rgba(231, 13, 13, 0.842);
+  }

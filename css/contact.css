@@ -1,7 +1,37 @@
 fieldset{
-    width:300px;
+    width: 60%;
+    display: table;
+    margin: auto;
 }
-textarea{
-    background-color: white;
-    
+legend {
+    text-align: center;
+}
+label {
+    margin-left: 70px;
+    font-family: 'Courier New', Courier, monospace;
+}
+input {
+    font-size: 20px;
+    margin: 20px;
+    margin-left: 100px;
+    outline: none;
+}
+textarea {
+    margin-left: 100px;
+    margin-top: 20px;
+}
+button {
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    margin: 30px 90px;
+    border-radius: 20px;
+    background-color: rgb(138, 19, 19);
+    color: wheat;
+    outline: none;
+    box-shadow: none;
+}
+button:hover {
+    color: rgb(161, 60, 20);
+    background-color: rgb(245, 216, 164);
 }
