@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../css/footer.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
 <body>
@@ -49,48 +50,57 @@
             </div>
         </header>
  
-        <div class="container">
-            <article>
+    <div class="container">
+        <div id="categories">
+            <form >
+                <input type="radio" name="type" value="landscape"> <label for="landscape">Landscapes</label>
+                <input type="radio" name="type" value="city">     <label for="city">Cities</label>
+                <input type="radio" name="type" value ="arch">      <label for="arch">Arch</label>     
+                <input type="radio" name="type" value="other">     <label for="other">Others</label>
+            
+            </form>
+        </div>
+            <article class="landscape">
                 <img src="../fotot/memory1.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 1</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article clas="landscape">
                 <img src="../fotot/memory2.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 2</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article class="landscape">
                 <img src="../fotot/memory3.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 3</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article class="city">
                 <img src="../fotot/memory4.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 4</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article class="city">
                 <img src="../fotot/memory5.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 5</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article class="city">
                 <img src="../fotot/memory6.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 6</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article class="arch">
                 <img src="../fotot/memory7.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 7</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article class="arch">
                 <img src="../fotot/memory8.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 8</h1>
                 <p>A trip to cyprus</p>
             </article>
-            <article>
+            <article class="other">
                 <img src="../fotot/memory9.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 9</h1>
                 <p>A trip to cyprus</p>
@@ -102,6 +112,34 @@
             <pre>                                                       copyright&copy;2013-All rights Reserved-Domain Name                                                                                                                                                                                                                     Punoi grupi 9</pre>
         </footer>
 
-    <script src="../js/responsive.js"></script>
+    <script>
+    $('input:radio[name="type"]').change(
+    function(){
+        if ($(this).is(':checked') && $(this).val() == 'landscape') {
+            $(".landscape").show();
+            $(".city").hide();
+            $(".arch").hide();
+            $(".other").hide();
+        }
+        else if ($(this).is(':checked') && $(this).val() == 'city') {
+            $(".city").show();
+            $(".landscape").hide();
+            $(".arch").hide();
+            $(".other").hide();
+        }
+        else if ($(this).is(':checked') && $(this).val() == 'arch') {
+            $(".arch").show();
+            $(".landscape").hide();
+            $(".city").hide();
+            $(".other").hide();
+        }
+        else if ($(this).is(':checked') && $(this).val() == 'other') {
+            $(".other").show();
+            $(".city").hide();
+            $(".arch").hide();
+            $(".landscape").hide();
+        }
+    });
+    </script>
 </body>
 </html>

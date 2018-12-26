@@ -22,3 +22,13 @@ article:hover {
     box-shadow: 10px 10px 5px #aaaaaa;
    
 }
+#categories{
+    display: table;
+    margin:auto;
+    font-size:20px;
+
+
+}
+#categories input{
+    margin:10px;
+}
