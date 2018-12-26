@@ -172,13 +172,13 @@ thead {
         <div class="popupContent">
          <div class="main">
             <span class="close">&times;</span>
-                <form action="">
-                    Name<input type="text" id="name"> <br />
-                    Website<input type="text" id="webpage"> <br />
-                    Time<input type="number" id="time"> <br />
-                    Employes <input type="number" id="employes"> <br />
-                    Rate<input type="number" min="1"  max="5" id="rate">
-                    <input type="button" onclick="myFunction();" value="Add project">
+                <form >
+                    Name    <input type="text"      id="name"       > <br />
+                    Website <input type="text"      id="webpage"    > <br />
+                    Time    <input type="number"    id="time"       > <br />
+                    Employes<input type="number"    id="employes"   > <br />
+                    Rate    <input type="number"    id="rate" min="1"  max="5" >
+                            <input type="submit"    onclick="myFunction()" value="Add project">
                 </form>
               </form>
       </div>
@@ -203,6 +203,7 @@ thead {
             btn.onclick = function() {
             popup.style.display = "block";
             }
+
             function myFunction() {
             alert("Projekti eshte shtuar");
             var name = document.getElementById("name").value;

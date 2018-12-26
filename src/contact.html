@@ -59,30 +59,31 @@
             <form>
                     <fieldset>
                     <legend><h2>Contact us:</h2></legend>
-                        <form action="mailto:shkelqimimaxharraj@gmail.com" method="post" enctype="text/plain">
+                        <form action="mailto:shkelqimimaxharraj@gmail.com"
+                         name="contactForm" method="post" enctype="text/plain" >
                             <table>
                                 <tr>
                                     <td><label>Emri:</label></td>
-                                    <td><input type="text"></td>
+                                    <td><input type="text" name="name"required></td>
                                 </tr>
                                 <tr>
                                     <td><label>Tel:</label></td>
-                                    <td><input type="tel"></td>
+                                    <td><input type="tel" name="tel"required></td>
                                 </tr>
                                 <tr>
                                     <td><label>Email:</label></td>
-                                    <td><input type="email"></td>
+                                    <td><input type="email" name="email" required></td>
                                 </tr>
                                 <tr>
                                     <td><label>Qyteti:</label></td>
-                                    <td><input type="text"></td>
+                                    <td><input type="text" name="city"required></td>
                                 </tr>
                                 <tr>
                                     <td><label>Mesazhi:</label></td>
-                                    <td><textarea name="" id="" cols="32" rows="5"></textarea></td>
+                                    <td><textarea name="message" id="" cols="32" rows="5" required></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td></td><td><Button type="submit">Send message</Button></td>
+                                    <td></td><td><input type="submit" value="Send message"></td>
                                 </tr>
                             </table>
                         </form>
@@ -106,6 +107,7 @@
             };
 
             
+
         </script>
                 
         

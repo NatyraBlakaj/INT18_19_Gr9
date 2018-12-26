@@ -39,6 +39,9 @@
      background-color: rgba(231, 13, 13, 0.842);
      border:none;
    }
+   input[type="button"]:hover {
+     background-color: green;
+   }
    
   .devAvatar{transition: all 0.5s ease;}
 
@@ -60,3 +63,4 @@
   #login {
     display: none;
   }
+ 

@@ -94,7 +94,15 @@
         $("#signUp").show();
     });
 
-
+    $("#submitSignUp").click(function(){
+        if ($('input:text' ).val().length == 0) {
+            alert("Please fill all the fields");
+            
+        }
+        else {
+            alert("U have been registered succesfully");
+        }
+    })
 
     </script>
 </body>

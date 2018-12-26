@@ -76,6 +76,19 @@
             <pre>                                                       copyright&copy;2013-All rights Reserved-Domain Name                                                                                                                                                                                                                     Punoi grupi 9</pre>
         </footer>
 
-    <script src="../js/responsive.js"></script>
+        <script type="text/javascript">
+ 
+            var d = new Date();
+                  x=d.getHours();
+
+           console.log(x);
+           if (x>12) {
+            alert("Night time");
+            $('header').css("background-color","black");
+           } else {
+            alert("Day time");
+           }
+
+        </script>
 </body>
 </html>
