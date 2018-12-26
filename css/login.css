@@ -43,6 +43,20 @@
   .devAvatar{transition: all 0.5s ease;}
 
   #loginform {
-    margin-top: 10%;
     background-color:rgba(231, 13, 13, 0.842);
+  }
+
+  #showLogin p, #showSignUp p {
+    text-decoration: none;
+    color: rgb(59, 117, 226);
+    cursor: pointer;
+    width: 20%;
+    margin-left: 150px;
+    margin-top: 20px;
+  }
+  #showLogin p:hover, #showSignUp p:hover {
+    color: blue;
+  }
+  #login {
+    display: none;
   }
