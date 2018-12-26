@@ -35,3 +35,9 @@ button:hover {
     color: rgb(161, 60, 20);
     background-color: rgb(245, 216, 164);
 }
+#map {
+    cursor: pointer;
+}
+#map img {
+    margin-top: 52px;
+}
