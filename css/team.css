@@ -1,37 +1,54 @@
-.employer img {
-    border-radius: 100%;
-    display: table;
-    margin: auto;
-    position: relative;
+#cf {
+    position:relative;
+    height:281px;
+    width:450px;
+    display: inline;
+  }
+  
+  #cf img {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #cf img.top:hover {
+    opacity:0;
+  }
+
+  .employer img {
+      border-radius: 100%;
+  }
+  #employer1 img {
+      top: 50px;
+      left: 200px;
+  }
+  #employer2 img {
+      top: 30px;
+      left: 600px;
+  }
+  #emp1Text {
+      position: absolute;
+      top: 450px;
+      left: 345px;
+      transition: transform .5s;
+  }
+  
+  #emp1Text:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+  #emp2Text {
+    position: absolute;
+    top: 450px;
+    left: 745px;
+    transition: transform .8s;
 }
-.employer {
-    width: 48%;
-    display: inline-block;
-    margin: 5% 0;
-}
-.employer h1 {
-    text-align: center;
-}
-.employer ul, .employer ol {
-    margin: 5% 0 10% 0;
-}
-.showHideInfo {
-    text-align: center;
-    margin: 10px;
-    cursor: pointer;
-}
-.showHideInfo:hover {
-    color: rgb(166, 133, 197);
-}
-li {
-    cursor: pointer;
-    text-align: center;
-    list-style-type: none;
-}
-li:hover {
-    color: red;
-    list-style-type: circle;
-}
-.employer p {
-    margin: 30px;
-}
+  #emp2Text:hover {
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari 3-8 */
+    transform: rotate(10deg);
+  }

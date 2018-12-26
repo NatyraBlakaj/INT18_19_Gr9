@@ -61,7 +61,7 @@
                     <i class="fas fa-map-marker-alt">   </i>   <input type="number" name="phone" placeholder="Phone number.."><br>
                     <i class="fas fa-key">              </i>   <input type="password" name="password" placeholder="Password.."><br>
                     <i class="fas fa-map-marked-alt">   </i>   <input type="number" name="zip code" placeholder="Zip code.."><br>
-                    <input type="button" value="sign up">
+                    <input type="button" id="submitSignUp" value="sign up">
                     <span id="showLogin" ><p onclick="hideSignUp()">Have an account</p></span>
                 </form>
             </div>
@@ -71,7 +71,7 @@
                     <h1 id="loginform">Log in</h1>
                     <i class="fas fa-user-tie" >        </i>   <input type="text" name="firstname" placeholder="Username.."><br>
                     <i class="fas fa-key">              </i>   <input type="password" name="password" placeholder="Password.."><br>
-                    <input type="button" value="Log in">
+                    <input type="button" id="submitLogin" value="Log in">
                     <span id="showSignUp" onclick="hideLogin()"><p>Dont have an account</p></span>
                 </form>
             </div>
@@ -93,6 +93,9 @@
         $("#login").hide();
         $("#signUp").show();
     });
+
+
+
     </script>
 </body>
 </html>

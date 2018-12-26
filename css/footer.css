@@ -112,7 +112,6 @@ button[type="submit"]:hover {
 footer {
     width: 100%;
     background-color: #2D2F2E;
-    background-repeat: repeat-x;
 }
 
 footer pre {
