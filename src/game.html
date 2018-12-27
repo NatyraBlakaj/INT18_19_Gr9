@@ -130,7 +130,10 @@
             timeleft--;
             document.getElementById("countdowntimer").textContent = timeleft;
             if(timeleft <= 0)
-                alert("Time over. Your score is:"+ i);
+                var x = confirm("Time over. Your score is:"+ i + " restart ?");
+                if (x == true) {
+                    location.reload();
+                }
             },1000);
 
 
