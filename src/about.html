@@ -78,17 +78,26 @@
 
         <script type="text/javascript">
  
-            var d = new Date();
-                  x=d.getHours();
+ function updateBackground() {
+  var 
+    ora = (new Date()).getHours(),
+    body = document.body,
+    bstyle = body.style,    
+    hello = document.querySelector(".hello");    
+  if (ora < 10) {
+    bstyle.backgroundColor = "rgb(162, 79, 79)";
+    bstyle.color = "white";
+  } else if (ora < 20) {
+    bstyle.backgroundColor = "maroon";
+    bstyle.color = "white";
+  } else {
+    bstyle.backgroundColor = "black";
+    bstyle.color = "white";
+  } 
+}
 
-           console.log(x);
-           if (x>12) {
-            alert("Night time");
-            $('header').css("background-color","black");
-           } else {
-            alert("Day time");
-           }
-
+setInterval(updateBackground, 1000 * 60);
+updateBackground();
         </script>
 </body>
 </html>
