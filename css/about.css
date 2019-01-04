@@ -7,3 +7,11 @@ table {
 img {
     border-radius: 100%;
 }
+
+video{
+    margin-left:30%;
+}
+audio{
+    margin-left: 38%;
+    margin-top:10%;
+}

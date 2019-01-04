@@ -41,3 +41,6 @@ button:hover {
 #map img {
     margin-top: 52px;
 }
+#sendMessage a{
+    text-decoration:none;
+}
