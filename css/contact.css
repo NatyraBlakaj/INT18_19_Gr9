@@ -26,14 +26,15 @@ button {
     cursor: pointer;
     margin: 30px 90px;
     border-radius: 20px;
-    background-color: rgb(138, 19, 19);
-    color: wheat;
+    background-color:rgb(243, 107, 107);
+    border:none;
     outline: none;
     box-shadow: none;
+    color:rgb(230, 226, 221)
 }
 button:hover {
-    color: rgb(161, 60, 20);
-    background-color: rgb(245, 216, 164);
+
+    background-color: rgb(121, 111, 94);
 }
 #map {
     cursor: pointer;
@@ -42,5 +43,11 @@ button:hover {
     margin-top: 52px;
 }
 #sendMessage a{
+    color:rgb(230, 226, 221);
     text-decoration:none;
+
+}
+#sendMessage {
+outline: none;
+border:none;
 }

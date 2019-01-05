@@ -20,9 +20,14 @@
     height:30px;
     border-radius:5px;
     border-color: rgb(218, 195, 161);
-    background-color: rgb(243, 107, 107);
+    background-color: rgb(236, 44, 44);
+    padding:5px;
+    font-size:18px;
+    color:rgb(230, 226, 221);
+
   }
   input[type="button"]:hover {
+    background-color: rgb(221, 69, 58);
     outline: none;
     border:none;
   
