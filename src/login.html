@@ -53,25 +53,24 @@
 
         <div class="container">
             <div id="signUp">
-                <form action="" id="signUpForm"> 
+                <form method="post" action="connect.php" id="signUpForm"> 
                     <h1>Sign up</h1>
-                    <i class="fas fa-user-tie" >        </i>   <input type="text" name="firstname" placeholder="Username.."><br>
-                    <i class="fas fa-phone">            </i>   <input type="email" name="eamil" placeholder="Email.."><br>
-                    <i class="fas fa-envelope">         </i>   <input type="addres" name="addres" placeholder="Addres.."><br>
+                    <i class="fas fa-user-tie" >        </i>   <input type="text" name="username" placeholder="Username.."><br>
+                    <i class="fas fa-phone">            </i>   <input type="email" name="email" placeholder="Email.."><br>
                     <i class="fas fa-map-marker-alt">   </i>   <input type="number" name="phone" placeholder="Phone number.."><br>
                     <i class="fas fa-key">              </i>   <input type="password" name="password" placeholder="Password.."><br>
-                    <i class="fas fa-map-marked-alt">   </i>   <input type="number" name="zip code" placeholder="Zip code.."><br>
-                    <input type="button" id="submitSignUp" value="sign up">
+                    <i class="fas fa-map-marked-alt">   </i>   <input type="number" name="zip" placeholder="Zip code.."><br>
+                    <input type="submit" id="submitSignUp" value="submit">
                     <span id="showLogin" ><p onclick="hideSignUp()">Have an account</p></span>
                 </form>
             </div>
 
             <div id="login">
-                <form>
+                <form  action="login.php" method="post">
                     <h1 id="loginform">Log in</h1>
-                    <i class="fas fa-user-tie" >        </i>   <input type="text" name="firstname" placeholder="Username.."><br>
-                    <i class="fas fa-key">              </i>   <input type="password" name="password" placeholder="Password.."><br>
-                    <input type="button" id="submitLogin" value="Log in">
+                    <i class="fas fa-user-tie" >       </i>   <input type="text" name="username" placeholder="Username.."><br>
+                    <i class="fas fa-key">            </i>   <input type="password" name="password" placeholder="Password.."><br>
+                    <input type="submit" name="but_submit" id="submitLogin" value="Log in">
                     <span id="showSignUp" onclick="hideLogin()"><p>Dont have an account</p></span>
                 </form>
             </div>
