@@ -14,7 +14,7 @@
   color:red;
 }
 form h1{
- background-color:rgb(233,43,97,55);
+ background-color:blue;
 text-align: center;
 color:black;
 }
@@ -49,7 +49,7 @@ input{
   
  .devAvatar{transition: all 0.5s ease;}
 
- #loginform {
-   background-color:rgba(231, 13, 13, 0.842);
+ #loginform h1{
+   background-color:blue;
  }
  
