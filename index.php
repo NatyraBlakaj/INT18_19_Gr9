@@ -20,7 +20,8 @@
 <body>
 
         
-        <header>
+        
+       <header>
             <table id="logoArea">
                 <td id="logo">
                     <img src="fotot/logo.png" height="100px" width="300px" alt="Logo">
@@ -41,15 +42,16 @@
 
             <div class="mainMenu">
                 <a href="../index.html"   class="active">HOMEPAGE</a>
-                <a href="src/gallery.html"  >GALLERY</a>
-                <a href="src/about.html">ABOUT</a>
-                <a href="src/portfolio.html">PORTFOLIO</a>
-                <a href="src/team.html"  >TEAM</a>
-                <a href="src/contact.html"  >CONTACT</a>
-                <a href="src/game.html" target="blank" >GAME</a>
-                <a href="src/login.html"> LOG IN</a>
+                <a href="src/gallery.php"  >GALLERY</a>
+                <a href="src/about.php">ABOUT</a>
+                <a href="src/portfolio.php">PORTFOLIO</a>
+                <a href="src/team.php"  >TEAM</a>
+                <a href="src/contact.php"  >CONTACT</a>
+                <a href="src/game.php" target="blank" >GAME</a>
+                <a href="src/login.php"> LOG IN</a>
             </div>
         </header>
+		
 
 
         <div id="container">

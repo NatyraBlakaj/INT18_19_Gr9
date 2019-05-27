@@ -40,41 +40,12 @@
     
     
     </head>
-
+   <?php
+		include "header.php";
+		?>
 <body>
 
-        
-        <header>
-            <table id="logoArea">
-                <td id="logo">
-                    <img src="../fotot/logo.png" height="100px" width="300px" alt="Logo">
-                </td>
-                <td id="moreOptions">
-                    <a href="../src/login.html">Sign up</a> |
-                    <a href="../src/login.html">Login</a> |
-                    <a href="../src/gallery.html">Arcives</a> |
-                    <a href="../src/contact.html">Contact</a>
-                </td>
-                <td id="searchBar">
-                    <form action="0">
-                        <input type="search" size="15">
-                        <i class="fa fa-search"></i>
-                    </form>
-                </td>
-            </table>
-
-            <div class="mainMenu">
-                <a href="../index.html"   class="active">HOMEPAGE</a>
-                <a href="../src/gallery.html"  >GALLERY</a>
-                <a href="../src/about.html">ABOUT</a>
-                <a href="../src/portfolio.html">PORTFOLIO</a>
-                <a href="../src/team.html"  >TEAM</a>
-                <a href="../src/contact.html"  >CONTACT</a>
-                <a href="../src/game.html"  target="blank"  >GAME</a>
-                <a href="../src/login.html"> LOG IN</a>
-            </div>
-        </header>
-
+    
         <div class="container">
                 <h1>Time <span id="countdowntimer">20</span> sec</h1>
                 <div id="target">

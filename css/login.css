@@ -1,66 +1,55 @@
 
  .fas{
-   margin: 10px 0;
-   color:white;
-   font-size:14px;
-   background-color:rgba(231, 13, 13, 0.842);
-   height: 30px;
-   width: 28px;
-   margin-left: 150px;
-   padding: 12px 0 0 17px;
- }
- form h1{
-  background-color:rgba(231, 13, 13, 0.842);
- text-align: center;
- color:black;
- }
- input{
-     box-sizing: border-box;
-     border: none;
-     height: 41px;
-     padding-bottom: 4px;
-     font-size: 17px;
-     width: 60%;
-     outline: none;
-     text-align: center;
-   }
-   input[type=submit]{
-     background-color: #4CAF50;
-     border-radius:4px;
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
-     background-color:rgba(231, 13, 13, 0.842);
-     float: right;
-     width: 30%;
-     margin-right: 19%;
-   }
-   input[type="submit"]:hover {
-     background-color: rgba(231, 13, 13, 0.842);
-     border:none;
-   }
-   input[type="submit"]:hover {
-     background-color: rgb(121, 111, 94);
-   }
-   
-  .devAvatar{transition: all 0.5s ease;}
-
-  #loginform {
-    background-color:rgba(231, 13, 13, 0.842);
+  margin:10px 0;
+  color:white;
+  font-size:14px;
+  background-color:blue;
+  height: 30px;
+  width: 28px;
+  margin-left: 150px;
+  padding: 12px 0 0 17px;
+}
+.signuperror{
+  text-align:center;
+  color:red;
+}
+form h1{
+ background-color:blue;
+text-align: center;
+color:black;
+}
+input{
+    box-sizing: border-box;
+    border:none;
+    height: 41px;
+    padding-bottom: 4px;
+    font-size: 17px;
+    width: 60%;
+    outline: none;
+    text-align: center;
   }
-
-  #showLogin p, #showSignUp p {
+  button[type="submit"]{
+    background-color: #4CAF50;
+    border-radius:4px;
+    color: black;
     text-decoration: none;
-    color: rgb(59, 117, 226);
     cursor: pointer;
-    width: 20%;
-    margin-left: 150px;
-    margin-top: 20px;
+    background-color:blue;
+    float: right;
+    width: 30%;
+    margin-right: 19%;
   }
-  #showLogin p:hover, #showSignUp p:hover {
-    color: blue;
+  button[type="submit"]:hover {
+    background-color: rgba(231, 13, 13, 0.842);
+    border:none;
   }
-  #login {
-    display: none;
+  button[type="submit"]:hover {
+    background-color: rgb(121, 111, 94);
   }
+  
+ .devAvatar{transition: all 0.5s ease;}
+
+ #loginform h1{
+   background-color:blue;
+ }
  

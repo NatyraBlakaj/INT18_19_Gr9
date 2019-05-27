@@ -9,8 +9,10 @@
 
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/gallery.css">
+        <link rel="stylesheet" href="../css/login.css">
+		<link rel="stylesheet" href="../css/gallery.css">
         <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,48 +20,66 @@
 
 <body>
 
-        
-        <header>
-            <table id="logoArea">
-                <td id="logo">
-                    <img src="../fotot/logo.png" height="100px" width="300px" alt="Logo">
-                </td>
-                <td id="moreOptions">
-                    <a href="../src/login.html">Sign up</a> |
-                    <a href="../src/login.html">Login</a> |
-                    <a href="../src/gallery.html">Archives</a> |
-                    <a href="../src/contact.html">Contact</a>
-                </td>
-                <td id="searchBar">
-                    <form action="0">
-                        <input type="search" size="15">
-                        <i class="fa fa-search"></i>
-                    </form>
-                </td>
-            </table>
+        <?php
+		include "header.php";
+		?>
+    <section class="gallery-links">
+   <div class="wrapper">
+   
+   <h2>Gallery</h2>
+   <hr class="line">
+   <div class="gallery-container">
+ <?php
+   if (isset($_SESSION['IDperdoruesit'])){     
 
-            <div class="mainMenu">
-                <a href="../index.html"   class="active">HOMEPAGE</a>
-                <a href="../src/gallery.html"  >GALLERY</a>
-                <a href="../src/about.html">ABOUT</a>
-                <a href="../src/portfolio.html">PORTFOLIO</a>
-                <a href="../src/team.html"  >TEAM</a>
-                <a href="../src/contact.html"  >CONTACT</a>
-                <a href="../src/game.html" target="blank"   >GAME</a>
-                <a href="../src/login.html"> LOG IN</a>
-            </div>
-        </header>
+   include_once 'includes/dbh.inc.php';
+   
+   $sql="select * from gallery order by orderGallery DESC;";
+   $stmt=mysqli_stmt_init($conn);
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+	   echo "SQl statement failes!";
+   }else{
+	   mysqli_stmt_execute($stmt);
+	   $result=mysqli_stmt_get_result($stmt);
+	   
+	   while($row=mysqli_fetch_assoc($result)){
+		   echo '
+		   <div class="foto">
+     <a href="#">
+	 <div style="background-image:url(img/gallery/'.$row["imgFullNameGallery"].');"></div>
+	   <h3>'.$row["titleGallery"].'</h3>
+	 <p>'.$row["descGallery"].'</p>
+	 </a>
+	 </div>';
+	   }
+   }
+
+   
+   echo'
+   <div class="gallery-upload">
+   <h1>Uploadfile</h1>
+   <form action="includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data" >				
+   <input type="text" name="filename" placeholder="File name...">
+   <input type="text" name="filetitle" placeholder="Image title...">
+   <input type="text" name="filedesc" placeholder="Image desctription...">
+   <input type="file" name="file">
+   <button type="submit" name="submit">Upload</button>
+   </form>
+   </div>';
+  
+
+   
+   
+   }
+     else {
+	   echo '
  
+   </div>
+      </div>
+   </section>
+  
     <div class="container">
-        <div id="categories">
-            <form >
-                <input type="radio" name="type" value="landscape"> <label for="landscape">Landscapes</label>
-                <input type="radio" name="type" value="city">     <label for="city">Cities</label>
-                <input type="radio" name="type" value ="arch">      <label for="arch">Arch</label>     
-                <input type="radio" name="type" value="other">     <label for="other">Others</label>
-            
-            </form>
-        </div>
+  
             <article class="landscape">
                 <img src="../fotot/memory1.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
                 <h1>Memory 1</h1>
@@ -105,9 +125,9 @@
                 <h1>Memory 9</h1>
                 <p>A trip to cyprus</p>
             </article>
-        </div>
-
-
+        </div>';
+	 }
+		?>
         <footer>
             <pre>                                                       copyright&copy;2013-All rights Reserved-Domain Name                                                                                                                                                                                                                     Punoi grupi 9</pre>
         </footer>
