@@ -7,7 +7,7 @@
         <header>
             <table id="logoArea">
                 <td id="logo">
-                    <img src="../src/fotot/logo.png" height="100px" width="300px" alt="Logo">
+                    <img src="../fotot/logo.png" height="100px" width="300px" alt="Logo">
                 </td>
                 <td id="moreOptions">
                     <a href="../src/signup.php">Sign up</a> |
@@ -30,7 +30,7 @@
                 <a href="../src/portfolio.php">PORTFOLIO</a>
                 <a href="../src/team.php"  >TEAM</a>
                 <a href="../src/game.php"  target="blank"  >GAME</a>
-				<a href="../src/login.php">Login</a>
-				<a href="../src/signup.php">Signup</a>
+				<a href="../src/login.php">LOGIN</a>
+				<a href="../src/signup.php">SIGN UP</a>
             </div>
         </header>
