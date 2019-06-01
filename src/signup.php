@@ -57,7 +57,7 @@
 							echo '<p class="signuperror">Invalide-mail!</p>';
                         }
                         else if($_GET['error']=="invalidusername"){
-							echo '<p class="signuperror">N!</p>';
+							echo '<p class="signuperror">Username must start with a letter and cant be just numbers!</p>';
 						}
 						else if($_GET['error']=="passwordchek"){
 							echo '<p class="signuperror">Your passwords do not match!</p>';

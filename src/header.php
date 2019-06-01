@@ -15,12 +15,7 @@
                     <a href="../src/game.php">Game</a> |
                     <a href="../src/contact.php">Contact</a>
                 </td>
-                <td id="searchBar">
-                    <form action="0">
-                        <input type="search" size="15">
-                        <i class="fa fa-search"></i>
-                    </form>
-                </td>
+        
             </table>
 
             <div class="mainMenu">
