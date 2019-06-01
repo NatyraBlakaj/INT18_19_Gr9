@@ -15,7 +15,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
+		<style>
+		
+		#logout{
+			margin-right:350px;
+			margin-top:30px;
+		}
+		</style>
+	</head>
 
 <body>
 
@@ -48,9 +55,12 @@
             <div >
 			<?php
 			if (isset($_SESSION['IDperdoruesit'])){
-				echo '<form method="post" action="includes/logout.inc.php" id="signUpForm"> 
+				echo '
+				<div id="logout">
+				<form method="post" action="includes/logout.inc.php" id="signUpForm"> 
 				<button type="submit" name="logout-submit">Logout</button>
-				</form>';
+				</form>
+				</div>';
 			}
 			else{
 				echo ' <form  action="includes/login.inc.php" method="post" id="signUpForm">

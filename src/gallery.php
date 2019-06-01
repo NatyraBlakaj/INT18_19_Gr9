@@ -23,16 +23,16 @@
         <?php
 		include "header.php";
 		?>
+
     <section class="gallery-links">
    <div class="wrapper">
-   
-   <h2>Gallery</h2>
-   <hr class="line">
+         
    <div class="gallery-container">
+    <h2>Gallery</h2>
  <?php
    if (isset($_SESSION['IDperdoruesit'])){     
-
    include_once 'includes/dbh.inc.php';
+
    
    $sql="select * from gallery order by orderGallery DESC;";
    $stmt=mysqli_stmt_init($conn);
@@ -44,16 +44,16 @@
 	   
 	   while($row=mysqli_fetch_assoc($result)){
 		   echo '
+	
 		   <div class="foto">
      <a href="#">
 	 <div style="background-image:url(img/gallery/'.$row["imgFullNameGallery"].');"></div>
-	   <h3>'.$row["titleGallery"].'</h3>
+	   <h3>* '.$row["titleGallery"].' *</h3>
 	 <p>'.$row["descGallery"].'</p>
 	 </a>
 	 </div>';
 	   }
    }
-
    
    echo'
    <div class="gallery-upload">
@@ -65,12 +65,14 @@
    <input type="file" name="file">
    <button type="submit" name="submit">Upload</button>
    </form>
+   </div>
    </div>';
   
 
    
    
    }
+
      else {
 	   echo '
  
@@ -128,38 +130,12 @@
         </div>';
 	 }
 		?>
+	
+		
+		
         <footer>
             <pre>                                                       copyright&copy;2013-All rights Reserved-Domain Name                                                                                                                                                                                                                     Punoi grupi 9</pre>
         </footer>
 
-    <script>
-    $('input:radio[name="type"]').change(
-    function(){
-        if ($(this).is(':checked') && $(this).val() == 'landscape') {
-            $(".landscape").show();
-            $(".city").hide();
-            $(".arch").hide();
-            $(".other").hide();
-        }
-        else if ($(this).is(':checked') && $(this).val() == 'city') {
-            $(".city").show();
-            $(".landscape").hide();
-            $(".arch").hide();
-            $(".other").hide();
-        }
-        else if ($(this).is(':checked') && $(this).val() == 'arch') {
-            $(".arch").show();
-            $(".landscape").hide();
-            $(".city").hide();
-            $(".other").hide();
-        }
-        else if ($(this).is(':checked') && $(this).val() == 'other') {
-            $(".other").show();
-            $(".city").hide();
-            $(".arch").hide();
-            $(".landscape").hide();
-        }
-    });
-    </script>
 </body>
 </html>
