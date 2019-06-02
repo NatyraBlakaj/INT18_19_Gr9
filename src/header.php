@@ -15,7 +15,11 @@
                     <a href="../src/game.php">Game</a> |
                     <a href="../src/contact.php">Contact</a>
                 </td>
+<<<<<<< HEAD
                 
+=======
+        
+>>>>>>> natyra
             </table>
 
             <div class="mainMenu">

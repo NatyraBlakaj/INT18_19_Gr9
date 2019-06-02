@@ -2,8 +2,8 @@
 
 $servername="localhost";
 $username="root";
-$password="blerta12";
-$dbname="galleryexample";
+$password="";
+$dbname="projektiPHP";
 
 $conn=mysqli_connect($servername,$username,$password,$dbname);
 

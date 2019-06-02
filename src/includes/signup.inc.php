@@ -2,7 +2,7 @@
 
 if(isset($_POST['signup-submit'])){
 	
-	require 'ldbh.inc.php';
+	require 'dbh.inc.php';
 	
 	$username=$_POST['uid'];
 	$email=$_POST['mail'];
@@ -21,8 +21,13 @@ if(isset($_POST['signup-submit'])){
 		header("Location: ../signup.php?error=invalidmail&uid=".$username);
 		exit();
 	}
-	else if(!preg_match("/^[a-zA-Z0-9]*$/",$username)){
-		header("Location: ../signup.php?error=invalidui&mail=".$email);
+	else if(!preg_match("/^[a-zA-Z]/",$username[0])|| preg_match("/^[0-9]/",$username)){
+		header("Location: ../signup.php?error=invalidusername");
+		exit();
+	}
+	else if(strlen($password)<8)
+	{
+		header("Location: ../signup.php?error=passwordcheklength");
 		exit();
 	}
 	else if($password!==$passwordRepeat)

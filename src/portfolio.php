@@ -207,10 +207,10 @@ thead {
         <div class="container">
                 <table id="projectsTable">
                         <thead>
-                            <td>Emri</td>
-                            <td>webpage</td>
-                            <td>Koha</td>
-                            <td>Nr puntoreve</td>
+                            <td>Name</td>
+                            <td>Webpage</td>
+                            <td>Time</td>
+                            <td>Employes</td>
                             <td> Delete </td>
                             <td> Edit </td>
                         </thead>

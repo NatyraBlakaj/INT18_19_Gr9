@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,11 +12,48 @@
         <link rel="stylesheet" href="css/slider.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/style.css">
+		  <link rel="stylesheet" href="css/gallery.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <style>
+.gallery-container{
+width:950px;
+	    margin-left:280px;
+		margin-bottom:5px;
+	border:1px solid black;
+
+}
+.gallery-container h1{
+
+	   text-align:center;
+
+	 border:1px groove black;
+	 margin-bottom:5px;
+	
+
+
+}
+
+#bottom-section{
+	height:120px;
+	background-color:rgba(0,0,0,0.1);
+	 border:1px groove black;
+	 text-align:center;
+	
+
+}
+
+#bottom-section a{
+	text-decoration:underline;
+	color:black;
+	
+
+}
+
+</style>
     </head>
 
 
@@ -27,23 +67,39 @@
                     <img src="fotot/logo.png" height="100px" width="300px" alt="Logo">
                 </td>
                 <td id="moreOptions">
+<<<<<<< HEAD
                     <a href="src/login.html">Sign up</a> |
                     <a href="src/login.html">Login</a> |
                     <a href="src/gallery.html">Archives</a> |
                     <a href="src/contact.html">Contact</a>
                 </td>
                 
+=======
+                    <a href="src/signup.php">Sign up</a> |
+                    <a href="src/login.php">Login</a> |
+                    <a href="src/gallery.php">Archives</a> |
+                    <a href="src/contact.php">Contact</a>
+                </td>
+             
+>>>>>>> natyra
             </table>
 
             <div class="mainMenu">
-                <a href="../index.html"   class="active">HOMEPAGE</a>
+                <a href="index.php"   class="active">HOMEPAGE</a>
                 <a href="src/gallery.php"  >GALLERY</a>
                 <a href="src/about.php">ABOUT</a>
                 <a href="src/portfolio.php">PORTFOLIO</a>
                 <a href="src/team.php"  >TEAM</a>
+<<<<<<< HEAD
                 <a href="src/contact.php"  >CONTACT</a>
                 <a href="src/login.php" target="blank" >Login</a>
                 <a href="src/signup.php"> SIGN UP</a>
+=======
+              
+                <a href="src/game.php" target="blank" >GAME</a>
+                <a href="src/login.php"> LOGIN</a>
+				<a href="src/signup.php"  >SIGNUP</a>
+>>>>>>> natyra
             </div>
         </header>
 	
@@ -56,6 +112,7 @@
                         <div class="slideshow-container">
 
                                 <div class="mySlides fade">
+
                                   <img src="fotot/articlefoto1.jpg" >
                                   <div class="caption"><h1>Slide 1</h1><p> slide 1 caption</p></div>
                                 </div>
@@ -112,116 +169,100 @@
 
             </div>
         
-            <div id="articles">
-                <article id="article1">
-                    <img src="fotot/spring.jpg" height="180px" width="225px" alt="Pa foto...">
-                    <h3>Lorem ipsum</h3>
-                    <br />
-                    <p> Fugit aliquid quisquam totam aliquam nobis,
-                        reprehenderit autem natus provident atqu</p>
-                    <br />
-                    <a href="src/gallery.html">VIEW THIS CATEGORY >></a>
-                </article>
+            <div class="gallery-container" >
+			
 
-                <article id="article2">
-                        <img src="fotot/summer.jpg" height="180px" width="225px" alt="Pa foto...">
-                        <h3>Lorem ipsum</h3>
-                        <br />
-                        <p> Fugit aliquid quisquam totam aliquam nobis,
-                            reprehenderit autem natus provident atqu</p>
-                        <br />
-                        <a href="src/gallery.html">VIEW THIS CATEGORY >></a>
-                </article>
+ <?php
+
+   if (isset($_SESSION['IDperdoruesit'])){     
+echo ' <h1>Your Last uploaded pictures</h1>';
+   include_once 'src/includes/dbh.inc.php';
+   
+   $sql="select * from gallery order by orderGallery DESC limit 3;";
+   $stmt=mysqli_stmt_init($conn);
+   if(!mysqli_stmt_prepare($stmt,$sql)){
+	   echo "SQl statement failes!";
+   }else{
+	   mysqli_stmt_execute($stmt);
+	   $result=mysqli_stmt_get_result($stmt);
+	   
+	   while($row=mysqli_fetch_assoc($result)){
+		   echo '
+		   <div class="foto" >
+     <a href="src/gallery.php">
+	 <div style="background-image:url(src/img/gallery/'.$row["imgFullNameGallery"].');"></div>
+	   <h3>* '.$row["titleGallery"].' *</h3>
+	 <p>'.$row["descGallery"].'</p>
+	 </a>
+	 </div>';
+	   }
+	 
+   }
+
+   
+   
+   }
+     else {
+	   echo '
+ 
+
+  
+            <article class="landscape">
+                <img src="fotot/memory1.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
+                <h2 style="color:black;">Memory 1</h1>
+                <p style="color:black;">A trip to cyprus</p>
+            </article>
+            <article clas="landscape">
+                <img src="fotot/memory2.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
+                <h2 style="color:black;">Memory 2</h1>
+                <p style="color:black;">A trip to cyprus</p>
+            </article>
+            <article class="landscape">
+                <img src="fotot/memory4.jpg" alt="Foto nuk eshte loaduar" height="200px" width="300px">
+                <h2 style="color:black;">Memory 3</h1>
+                <p style="color:black;">A trip to cyprus</p>
+            </article>
+            
+';
+	 }
+		?>
+				
+
+	</div>	
+
+		
+        <div  id="bottom-section">
+		     <table id="logoArea">
+			  <td id="logo">
+                    <img src="fotot/Welcome.png" alt="person" width=130px height=100px>
+                </td>
+			          <td><p style="color:black; font-size:15px;">
+                     <?php
+if(isset($_SESSION['IDperdoruesit'])){
+	echo"Welcome ".$_SESSION['EMRIperdoruesit']." enjoy your time at our website ^-^<br/>";
+	echo "<a href='src/login.php'>Logout</a>";
+}
+else{
+	echo "You dont have an account - <a href='src/signup.php'>Signup</a></br>";
+echo "You have an account - <a href='src/login.php'>Login</a>";
+}
+
+?> 
+     </p>           </td>
+                <td id="moreOptions">
+				<a href="index.php">Home</a> |
+                    <a href="src/game.php">Game</a> |
+                    <a href="src/gallery.php">Gallery</a>|
+                    <a href="src/portfolio.php">Portfolio</a>|
+                    <a href="src/team.php">Team</a>
+                </td>
+            </table>
                 
-                <article id="article3">
-                            <img src="fotot/autumn.jpg" height="180px" width="225px" alt="Pa foto...">
-                            <h3>Lorem ipsum</h3>
-                            <br />
-                            <p> Fugit aliquid quisquam totam aliquam nobis,
-                                reprehenderit autem natus provident atqu</p>
-                            <br />
-                            <a href="src/gallery.html">VIEW THIS CATEGORY >></a>
-                </article>
-                    
-                <article id="article4">
-                                <img src="fotot/winter.jpg" height="180px" width="225px" alt="Pa foto...">
-                                <h3>Lorem ipsum</h3>
-                                <br />
-                                <p> Fugit aliquid quisquam totam aliquam nobis,
-                                    reprehenderit autem natus provident atqu</p>
-                                <br />
-                                <a href="src/gallery.html">VIEW THIS CATEGORY >></a>
-                </article>
-
-            </div>
-        </div>
-        <div  id="moreInfo">
-                <div id="developers">
-                    <h2>Punuan</h2>
-                    <div class="developer">
-                            <table>
-                                    <tr>
-                                    <td rowspan="3" colspan="5"><img class="devAvatar" height="95px" width="95px" src="fotot/maleavatar.jpg"></td>
-                                    </tr>
-                                    <tr>
-                                      <td><b>Shkelqim Maxharraj</b></td>
-                                    </tr>
-                                    <tr>
-                                      <td>disa tekst rreth ketij puntori te zellsisa tekst rreth disa tekst rreth ketij puntori te zellsisa tekst r ketij puntori te zellsh</td>
-                                    </tr>
-                            </table>
-                            <table>
-                                    <tr>
-                                    <td rowspan="3"><img class="devAvatar" height="95px" width="95px" src="fotot/femaleavatar.jpg"></td>
-                                    </tr>
-                                    <tr>
-                                      <td><b>Natyra Blakaj</b></td>
-                                      
-                                    </tr>
-                                    <tr>
-                                      <td>disa tekst rreth ketij disa tekst rreth ketij puntori te zellsisa tekst puntori te zellsisa tekst rreth ketij puntori te zellsh</td>
-                                    </tr>
-                            </table>
-                    </div>
-
-                </div>
-                <div id="aboutProject">
-                    <h3>One quarter</h3>
-                    <br />
-                    <p><b>Post title</b> <br /> <small><a href="#">Admin</a>domain.com<br />
-                    Thursday, 22nd November, 2018
-                    </small>
-                    <br /><br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Consequuntur aperiam at tempore officiis esse quod<br />
-                     <a href="src/team.html" class="readMore">Read more</a>
-                    </p>
-                        <br />
-                    <p><b>Post title</b> <br /> <small><a href="#">Admin</a>domain.com<br />
-                        Thursday, 22nd November, 2018
-                        </small>
-                        <br /><br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Consequuntur aperiam at tempore officiis esse quod<br />
-                         <a href="src/team.html" class="readMore">Read more</a>
-                    </p>
-                    <br />
-                </div>
-                <div id="submitForm">
-                    <h3>One quarter</h3>
-                        <br />
+        
+</div>
+				
                 
-                    <form action="">
-                        <input size="27" placeholder="Name" type="text">
-                        <input size="27" placeholder="Email" type="email">
-                        <textarea rows="7" placeholder="Message" cols="28"></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
-                    <br />
-                </div>
-        </div>
-
-        <footer>
+      <footer>
             <pre>                                                       copyright&copy;2013-All rights Reserved-Domain Name                                                                                                                                                                                                                     Punoi grupi 9</pre>
         </footer>
 

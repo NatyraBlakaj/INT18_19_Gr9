@@ -47,7 +47,7 @@
 						if($_GET['error']=="emptyfields"){
 						echo '<p class="signuperror">Fill in all fields!</p>';
 						}
-						else if($_GET['error']=="invaliduidmail"){
+						else if($_GET['error']=="invalidmailuid"){
 							echo '<p class="signuperror">Invalid username and e-mail!</p>';
 						}
 						else if($_GET['error']=="invaliduid"){
@@ -55,18 +55,23 @@
 						}
 						else if($_GET['error']=="invalidmail"){
 							echo '<p class="signuperror">Invalide-mail!</p>';
+                        }
+                        else if($_GET['error']=="invalidusername"){
+							echo '<p class="signuperror">Username must start with a letter and cant be just numbers!</p>';
 						}
 						else if($_GET['error']=="passwordchek"){
 							echo '<p class="signuperror">Your passwords do not match!</p>';
+                        }
+                        else if($_GET['error']=="passwordcheklength"){
+							echo '<p class="signuperror">Password must be at least 8 characters!</p>';
 						}
 						else if($_GET['error']=="usertaken"){
 							echo '<p class="signuperror">Username is already taken!</p>';
-						}
-					}
-					else if($_GET['signup']=="success"){
+				        }
+                     }
+                     else if(isset($_GET['signup'])){
 						echo '<p class="signupsuccess">Signup successful!</p>';
-						
-					}
+					 }
 					?>
                     <i class="fas fa-user-tie" >        </i> <input type="text" name="uid" placeholder="Username"><br>
                     <i class="fas fa-phone">            </i> <input type="text" name="mail" placeholder="Email"><br>

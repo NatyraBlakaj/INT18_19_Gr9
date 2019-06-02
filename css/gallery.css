@@ -11,6 +11,7 @@ article {
 article h1 {
     text-align: center;
     padding-top: 5px;
+	text-decoration:underline;
 }
 article p {
     text-align: center;
@@ -48,25 +49,23 @@ article:hover {
 	color:#111;
 	text-transform:uppercase;
 }
-.wrapper hr{
-	width:960px;
-	margin-left:280px;
-	margin-bottom:10px;
 
-}
 .gallery-container{
 		display:inline-block;
 		width: 960px;
+			border:1px solid black;
+			margin:10px;
 
 }
 .foto{
 		
 		display: inline-block;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
+
   margin-bottom:100px;
  border:solid black 2px;
- margin-right:60px;
+ margin-right:40px;
 
 
 }
@@ -85,6 +84,7 @@ article:hover {
 	text-decoration:none;
 	font-size:20px;
 	font-weight:150;
+	margin-top:8px;
 	color:#111;
 	text-transform:uppercase;
 }
@@ -97,11 +97,9 @@ article:hover {
     padding-bottom:20px;}
 
 .gallery-upload{
-	width: 925px;
+	width: 930px;
 margin:10px;
-margin-right:200px;
 
-	border:solid black 1px;
 }
 	
 
