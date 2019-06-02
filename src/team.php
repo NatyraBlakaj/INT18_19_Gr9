@@ -19,11 +19,18 @@
     <style>
     .developer {
         text-align:center;
+        border-radius:30px;
+        opacity: 0.9;
         width:30%;
         display:inline-block;
         border:1px solid lightblue;
         margin:6%;
         background-color: #a5b08e;
+    }
+    .developer:hover {
+        opacity:1;
+        border:1px solid  lightblue;
+        cursor:pointer;
     }
     .developer img {
         height:100px;
