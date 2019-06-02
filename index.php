@@ -42,8 +42,8 @@
                 <a href="src/portfolio.php">PORTFOLIO</a>
                 <a href="src/team.php"  >TEAM</a>
                 <a href="src/contact.php"  >CONTACT</a>
-                <a href="src/login.php" target="blank" >GAME</a>
-                <a href="src/signup.php"> LOG IN</a>
+                <a href="src/login.php" target="blank" >Login</a>
+                <a href="src/signup.php"> SIGN UP</a>
             </div>
         </header>
 	

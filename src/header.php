@@ -24,7 +24,7 @@
                 <a href="../src/about.php">ABOUT</a>
                 <a href="../src/portfolio.php">PORTFOLIO</a>
                 <a href="../src/team.php"  >TEAM</a>
-                <a href="../src/contact.php"  target="blank"  >GAME</a>
+                <a href="../src/contact.php"  target="blank"  >Contact</a>
 				<a href="../src/login.php">LOGIN</a>
 				<a href="../src/signup.php">SIGN UP</a>
             </div>
