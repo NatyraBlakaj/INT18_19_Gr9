@@ -68,11 +68,13 @@
 						else if($_GET['error']=="usertaken"){
 							echo '<p class="signuperror">Username is already taken!</p>';
 						}
-					}
-					else if($_GET['signup']=="success"){
+						else if($_GET['signup']=="success"){
 						echo '<p class="signupsuccess">Signup successful!</p>';
+					
+					
 						
 					}
+					 }
 					?>
                     <i class="fas fa-user-tie" >        </i> <input type="text" name="uid" placeholder="Username"><br>
                     <i class="fas fa-phone">            </i> <input type="text" name="mail" placeholder="Email"><br>
