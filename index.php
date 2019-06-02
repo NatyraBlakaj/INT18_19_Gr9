@@ -32,12 +32,7 @@
                     <a href="src/gallery.html">Archives</a> |
                     <a href="src/contact.html">Contact</a>
                 </td>
-                <td id="searchBar">
-                    <form action="0">
-                        <input type="search" size="15" autocomplete="on">
-                        <i class="fa fa-search"></i>
-                    </form>
-                </td>
+                
             </table>
 
             <div class="mainMenu">
@@ -47,11 +42,12 @@
                 <a href="src/portfolio.php">PORTFOLIO</a>
                 <a href="src/team.php"  >TEAM</a>
                 <a href="src/contact.php"  >CONTACT</a>
-                <a href="src/game.php" target="blank" >GAME</a>
-                <a href="src/login.php"> LOG IN</a>
+                <a href="src/login.php" target="blank" >GAME</a>
+                <a href="src/signup.php"> LOG IN</a>
             </div>
         </header>
-		
+	
+    
 
 
         <div id="container">
@@ -94,8 +90,21 @@
                     <div>
                         <span class="fadingLine"></span>
                     </div>
-                        <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit aliquid quisquam totam aliquam nobis,<br />
-                            reprehenderit autem natus provident atqu ,, </p>
+                    <?php
+                        $name = "user";
+                        $value = "Grupi 24";
+                        setcookie($name, $value, time() + (86400 * 30), "/");
+
+
+
+                        if(!isset($_COOKIE[$name])) {
+                            echo "<p>alert('Cookies are not set');</p>";
+                        } else {
+                            echo "<p>Cookies are set, your name is $value</p>";
+                        }
+                        ?>
+                    <br />
+                    <button>Click here to change cookies name</button>
                     <div>
                         <span class="fadingLine"></span>
                     </div>
@@ -218,6 +227,11 @@
 
     <script src="js/responsive.js"></script>
     <script>
+
+
+
+
+            document.getElementById('coo')
             var x = 1;
             showSlides(x);
 
@@ -245,6 +259,9 @@
             slides[x-1].style.display = "block";  
             dots[x-1].className += " active";
             }
+
+
+            
     
     </script>
 </body>
