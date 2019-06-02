@@ -11,7 +11,7 @@ $cookie_name = "grupi";
 $cookie_value = "Grupi 24";
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 ?>
-?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -78,10 +78,10 @@ width:950px;
                     <img src="fotot/logo.png" height="100px" width="300px" alt="Logo">
                 </td>
                 <td id="moreOptions">
-                    <a href="src/login.html">Sign up</a> |
-                    <a href="src/login.html">Login</a> |
-                    <a href="src/gallery.html">Archives</a> |
-                    <a href="src/contact.html">Contact</a>
+                    <a href="src/signup.php">Sign up</a> |
+                    <a href="src/login.php">Login</a> |
+                    <a href="src/gallery.php">Archives</a> |
+                    <a href="src/contact.php">Contact</a>
                 </td>
                 
             </table>
