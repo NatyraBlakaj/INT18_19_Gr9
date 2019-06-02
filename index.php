@@ -1,5 +1,16 @@
 <?php
- session_start();
+session_start([
+    'cookie_lifetime' => 86400,
+    'read_and_close'  => true,
+]);
+ $_SESSION['dev1'] = 'Natyra';
+$_SESSION['dev2']   = 'Fitore';
+$_SESSION['dev3'] = 'Blerta';
+
+$cookie_name = "grupi";
+$cookie_value = "Grupi 24";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -67,21 +78,12 @@ width:950px;
                     <img src="fotot/logo.png" height="100px" width="300px" alt="Logo">
                 </td>
                 <td id="moreOptions">
-<<<<<<< HEAD
                     <a href="src/login.html">Sign up</a> |
                     <a href="src/login.html">Login</a> |
                     <a href="src/gallery.html">Archives</a> |
                     <a href="src/contact.html">Contact</a>
                 </td>
                 
-=======
-                    <a href="src/signup.php">Sign up</a> |
-                    <a href="src/login.php">Login</a> |
-                    <a href="src/gallery.php">Archives</a> |
-                    <a href="src/contact.php">Contact</a>
-                </td>
-             
->>>>>>> natyra
             </table>
 
             <div class="mainMenu">
@@ -90,16 +92,10 @@ width:950px;
                 <a href="src/about.php">ABOUT</a>
                 <a href="src/portfolio.php">PORTFOLIO</a>
                 <a href="src/team.php"  >TEAM</a>
-<<<<<<< HEAD
+
                 <a href="src/contact.php"  >CONTACT</a>
                 <a href="src/login.php" target="blank" >Login</a>
                 <a href="src/signup.php"> SIGN UP</a>
-=======
-              
-                <a href="src/game.php" target="blank" >GAME</a>
-                <a href="src/login.php"> LOGIN</a>
-				<a href="src/signup.php"  >SIGNUP</a>
->>>>>>> natyra
             </div>
         </header>
 	
@@ -145,23 +141,18 @@ width:950px;
                
                 <div id="slideShowText">
                     <div>
-                        <span class="fadingLine"></span>
+                        <span class="fadingLine">
+                        </span>
                     </div>
                     <?php
-                        $name = "user";
-                        $value = "Grupi 24";
-                        setcookie($name, $value, time() + (86400 * 30), "/");
-
-
-
-                        if(!isset($_COOKIE[$name])) {
-                            echo "<p>alert('Cookies are not set');</p>";
+                    if(!isset($_COOKIE[$cookie_name])) {
+                            echo "Cookie named '" . $cookie_name . "' is not set!";
                         } else {
-                            echo "<p>Cookies are set, your name is $value</p>";
-                        }
-                        ?>
+                            echo "Cookie '" . $cookie_name . "' is set!<br>";
+                            echo "Value is: " . $_COOKIE[$cookie_name];
+                        }       
+                    ?>
                     <br />
-                    <button>Click here to change cookies name</button>
                     <div>
                         <span class="fadingLine"></span>
                     </div>
